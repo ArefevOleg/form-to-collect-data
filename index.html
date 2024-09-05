@@ -3,23 +3,23 @@
 <head>
 </head>
 <body>
-<div class="cntainer">
+<div class="container">
 	<h1 id="title">freeCodeCamp Survey Form</h1>
 	<p id="description">Thank you for taking the time to help us improve the platform</p>
 	<form id="survey-form">
 		<fieldset>
 			<legend>Personal data</legend>
 			<div>
-				<label for="name-label">Name</label>
-				<input id="name-label" type="text" value="name" placeholder="Enter your name">
+				<label for="name" id="name-label">Name</label>
+				<input id="name" type="text" name="name" value="name" placeholder="Enter your name" required>
 			</div>
 			<div>
-				<label for="email-label">Email</label>
-				<input id="email-label" type="email" value="email" placeholder="Enter your email">
+				<label for="email" id="email-label">Email</label>
+				<input id="email" type="email" name="email" value="email" placeholder="Enter your email" required>
 			</div>
 			<div>
-				<label for="number-label">Age (optional)</label>
-				<input id="number-label" type="number" value="number" placeholder="Enter your age">
+				<label for="number" id="number-label">Age (optional)</label>
+				<input id="number" type="number" name="age" value="number" placeholder="Enter your age" min="1" max="3">
 			</div>
 			<div>
 				<label for="dropdown">Which option best describes your current role?
@@ -36,14 +36,17 @@
 		</fieldset>
 		<div>
 			<p>Would you recommend freeCodeCamp to a friend?</p>
-			<label>Definitely
-				<input type="radio" value="definitely">
+			<label>
+				<input type="radio" value="definitely" name="recommend" checked>
+				Definitely
 			</label>
-			<label>Maybe
-				<input type="radio" value="maybe">
+			<label>
+				<input type="radio" value="maybe" name="recommend">
+				Maybe
 			</label>
-			<label>Not sure
-				<input type="radio" value="not sure">
+			<label>
+				<input type="radio" value="not sure" name="recommend">
+				Not sure
 			</label>
 		</div>
 		<div>
@@ -94,10 +97,10 @@
 			</label>
 		</div>
 		<div>
-			<label>Additional Courses</label>
-			<textarea placeholder="Enter your comment here..."></textarea>
+			<label for="comments">Additional Courses</label>
+			<textarea id="comments" name="comments" placeholder="Enter your comment here..."></textarea>
 		</div>
-		<input type="submit" value="Submit" />
+		<input id="submit" type="submit" value="Submit" />
 	</form>
 </div>
 </body>
